@@ -2657,7 +2657,7 @@ ul.plain li::before { color:var(--p-i-ink); }
    The slides the teacher has hidden persist the same way, under their own version-keyed
    name, so a hide survives a refresh mid-lesson but never outlives a push.
    Everything else (font scale, teacher toggle, iSAMS state, timers) stays session-only. */
-const DECK_VERSION = 'v20261019-150500';
+const DECK_VERSION = 'v20261019-150829';
 
 /* ===========================================
    RUNTIME_STRIP: everything the boot code builds or writes at run time.
@@ -2708,7 +2708,7 @@ const ELEMENTS = [
   { id: 'prep',    name: 'Pre and Post List', prep: true, items: [
     { text: 'Print the Student Sheets, one for each student: page 1 only, single sided. Do not print page 2 (the lined page): the back stays blank for the Do Now map.', link: 'sheet file',
       href: 'https://docs.google.com/presentation/d/1oSv9GgahasXnaEoPfeds9FW-JS62qXkYJt4AW6YOv98/edit' },
-    { text: 'No new self-assessment: students use their own copy from yesterday. Bring them back.', link: 'self-assessment',
+    { text: 'No new self-assessment: students keep using their own copy from yesterday.', link: 'self-assessment',
       href: 'https://docs.google.com/document/d/14gCDWuTm_h-IhMqR_QI6-HaprGaK7iA7Dni6UpP4098/edit' },
     { text: 'Print the Pilot and Navigator cards.', link: 'print Doc',
       href: 'https://docs.google.com/document/d/1LGHGktDiOO7Q_GBUrhadntWyhwzBvDJidJS3ZInBPy0/edit' },
@@ -2729,10 +2729,10 @@ const ELEMENTS = [
     { text: 'After the lesson: type your notes on the last slide.', link: 'open notes', jump: 'notesBox', post: true }
   ] },
   { id: 'entry',   name: 'Entry routine' },
-  { id: 'donow',   name: 'Do Now' },
+  { id: 'donow',   name: 'Do Now',
+    cfu: 'Which helps a visitor more: \u201cgo past the stairs\u201d or \u201cat the stairs, turn left and go up one floor\u201d? Why?', },
   { id: 'lisc',    name: 'Learning intention and success criteria' },
   { id: 'lap1',    name: 'Lesson 1: Warm-up round', lap: true,
-    cfu: 'Which helps a visitor more: \u201cgo past the stairs\u201d or \u201cat the stairs, turn left and go up one floor\u201d? Why?',
     sc: 'Success Criterion 1: calibrate my drone and fly a clean warm-up round',
     brainBreak: 'Boi-ing 7' },
   { id: 'lap2',    name: 'Lesson 2: Navigation notes', lap: true,
